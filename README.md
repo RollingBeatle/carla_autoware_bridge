@@ -1,6 +1,9 @@
 # carla_autoware_bridge
 An addition package to `carla_ros_bridge` to connect CARLA simulator to Autoware Universe software.
 
+This is a slightly modified version of the original Robotics autoware bridge wit
+h the option to execute Autoware alongside Scenic. The current version is a prototype that aims to be further improved.
+
 Warning! This is still **Work in Progress** repository. Reports and improvement suggestions are very welcome.
 
 ![demo](images/demo.png)

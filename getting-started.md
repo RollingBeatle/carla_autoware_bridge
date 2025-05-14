@@ -58,7 +58,7 @@ Go to autoware/autoware.repos files and use your text editor to add the followin
   # carla
   carla/ros-bridge:
     type: git
-    url: https://github.com/Robotics010/ros-bridge.git
+    url: https://github.com/RollingBeatle/ros-bridge.git
     version: master
   carla/astuff_sensor_msgs:
     type: git
@@ -66,7 +66,7 @@ Go to autoware/autoware.repos files and use your text editor to add the followin
     version: master
   carla/carla_autoware_bridge:
     type: git
-    url: https://github.com/Robotics010/carla_autoware_bridge.git
+    url: https://github.com/RollingBeatle/carla_autoware_bridge.git
     version: master
   carla/carla_tesla_model3_description:
     type: git
