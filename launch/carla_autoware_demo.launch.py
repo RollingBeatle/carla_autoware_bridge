@@ -55,6 +55,11 @@ def generate_launch_description():
             description=('Is third person view window is needed,'
                          'it can be used to manual control as well')
         )
+    verifai_argument = DeclareLaunchArgument(
+            name='verifai',
+            default_value='false',
+            description=('Enable/disable Verifai mode.')
+        )
 
     carla_autoware_bridge = IncludeLaunchDescription(
       PythonLaunchDescriptionSource([os.path.join(
@@ -65,6 +70,7 @@ def generate_launch_description():
                 'port': LaunchConfiguration('port'),
                 'timeout': LaunchConfiguration('timeout'),
                 'town': LaunchConfiguration('town'),
+                'verifai': LaunchConfiguration('verifai'),
             }.items())
 
     spawn_ego_vehicle = IncludeLaunchDescription(
@@ -93,6 +99,7 @@ def generate_launch_description():
         raw_vehicle_converter,
         view_argument,
         manual_control_window,
+        verifai_argument
     ])
     return ld
 

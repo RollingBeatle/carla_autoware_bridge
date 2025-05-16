@@ -85,6 +85,11 @@ def generate_launch_description():
             description='Role names to identify ego vehicles. '
         ),
         launch.actions.DeclareLaunchArgument(
+            name='verifai',
+            default_value='False',
+            description='Enable/disable Verifai mode.'
+        ),
+        launch.actions.DeclareLaunchArgument(
             name='csv_path_steer_map',
             default_value=get_package_share_directory(
                 'carla_autoware_bridge') + '/data/carla_tesla_model3/steer_map.csv'
@@ -135,7 +140,12 @@ def generate_launch_description():
                 {
                     'ego_vehicle_role_name': launch.substitutions.LaunchConfiguration(
                         'ego_vehicle_role_name')
+                },
+                {
+                    'verifai': launch.substitutions.LaunchConfiguration(
+                        'True')
                 }
+
             ],
             remappings=[
                 ('/carla/ego_vehicle/rgb_front/camera_info',
